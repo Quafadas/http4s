@@ -4,6 +4,27 @@
 Maintenance branches are merged before each new release. This change log is
 ordered chronologically, so each release contains all changes described below it.
 
+# v1.0.0-M34 (2022-07-05)
+
+This release is the latest milestone in the 1.x series, and is _not_ binary compatible with previous 1.0 milestones.  It also includes the changes from v0.23.13.
+
+## What's Changed
+### http4s-core
+* Remove `CollectionCompat` by @danicheg in https://github.com/http4s/http4s/pull/6508
+### http4s-server
+* Address the entity model in the server's `RequestLogger` by @danicheg in https://github.com/http4s/http4s/pull/6323
+* Fix regression of `Router#define` by @danicheg in https://github.com/http4s/http4s/pull/6371
+* Relax `server.middleware.Caching` constraints by @danicheg in https://github.com/http4s/http4s/pull/6490
+### http4s-client
+* Take into account the `Entity` model in the `ResponseLogger` by @danicheg in https://github.com/http4s/http4s/pull/6319
+### Behind the scenes
+* Merge 0.23 -> main by @armanbilge in https://github.com/http4s/http4s/pull/6430
+* vault, scala-java-time updates via 0.23 by @armanbilge in https://github.com/http4s/http4s/pull/6443
+* Ignore cats updates on main by @armanbilge in https://github.com/http4s/http4s/pull/6472
+* 0.23 -> main by @armanbilge in https://github.com/http4s/http4s/pull/6499
+
+**Full Changelog**: https://github.com/http4s/http4s/compare/v1.0.0-M33...v1.0.0-M34
+
 # v0.23.13 (2022-06-25)
 
 This release is binary compatible with 0.23.x, and additionally includes the fixes in v0.22.14.
@@ -16,7 +37,8 @@ This release is binary compatible with 0.23.x, and additionally includes the fix
 * Update scodec-bits to 1.1.34 in series/0.23 by @http4s-steward in https://github.com/http4s/http4s/pull/6455
 * Update fs2-core, fs2-io to 3.2.8 in series/0.23 by @http4s-steward in https://github.com/http4s/http4s/pull/6461
 * Update cats-core, cats-laws to 2.8.0 in series/0.23 by @http4s-steward in https://github.com/http4s/http4s/pull/6471
-* Add Ordering for MediaRange by @FrancescoSerra in https://github.com/http4s/http4s/pull/6486
+* Add Ordering for MediaRange by @
+coSerra in https://github.com/http4s/http4s/pull/6486
 * Add `Host#fromIp4sHost` method by @danicheg in https://github.com/http4s/http4s/pull/6489
 * Make Uri.Path.merge compliant by @FrancescoSerra in https://github.com/http4s/http4s/pull/6481
 ### http4s-server
