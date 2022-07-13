@@ -1,5 +1,28 @@
 # Error Handling
 
+# For beginnners
+> Hey - it's swallowing my exceptions
+
+```
+import org.http4s.server.middleware.ErrorHandling
+
+val routes: HttpRoutes[IO] = ???
+
+val serveThis = ErrorHandling(routes)
+        
+EmberServerBuilder
+    .default[IO]
+    .withPort(port"8080")
+    .withHost(host"localhost")
+    .withHttpApp(serveThis)
+    .build
+
+```
+
+Should be a rational starting point.
+
+# Detail
+
 A `MessageFailure` indicates an error handling an HTTP message.  These
 include:
 
